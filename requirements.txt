@@ -9,3 +9,4 @@ PyYAML==3.12
 repoze.lru==0.6
 rlp==0.5.1
 scrypt==0.8.0
+six==1.11.0

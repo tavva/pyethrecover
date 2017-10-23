@@ -12,6 +12,7 @@ from ethereum.tools.keys import decode_keystore_json
 from joblib import Parallel, delayed
 from optparse import OptionParser
 from recover_tools import encode_hex, getseed
+from six import string_types
 
 # Option parsing
 
@@ -72,7 +73,7 @@ def generate_all(el, tr):
         yield tr
 
 def attempt(w, pw, verbose):
-    if not isinstance(pw, basestring):
+    if not isinstance(pw, string_types):
         pw = ''.join(str(i) for i in pw)
 
     if verbose > 0:
